@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="./css/all.min.css"/>
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>@Mateen.psi</h1>
+    <div class="wrapper">
+      <div>
+        <h2>To Do List</h2>
+        <input minlength="3" id="input" type="text" name="taskName" placeholder="Add New Task"/>
+        <button id="plus">
+          <i class="fa-duotone fa-circle-plus"></i>
+        </button>
+      </div>
+      <ul id="ul">
+        <li data-flag="off">
+          <div>
+            <input type="checkbox" id="checkbox" onchange="selects(this)">
+            <strong id="text">First Task</strong>
+          </div>
+          <div>
+            <i onclick="remove(this)" class="fa-duotone fa-circle-xmark delete"></i>
+            <i onclick="edit(this)" id="edit" class="fa-duotone fa-pen-to-square edit"></i>
+          </div>
+        </li>
+      </ul>
+      <button onclick="_clear()">Clear</button>
+    </div>
+  </body>
+  <script src="./js/project.js"></script>
+</html>
